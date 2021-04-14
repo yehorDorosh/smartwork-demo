@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartwork test task</title>
+</head>
+
+<body>
+  <h1>Solution</h1>
+  <div contenteditable="true">
+    <del>deleted</del> accepted <ins>inserted</ins>
+  </div>
+
+  <h2>Task</h2>
+  <h4>Part 0 CSS styles</h5>
+  <ol type="a">
+    <li>add css styles to make "deleted" text red and "inserted" green</li>
+  </ol>
+  <h4>Hide / Unhide &lt;del&gt; tags when editing</h5>
+    <ol type="a">
+      <li>When clicking inside the ContentEditable, words which are inside &lt;del&gt; tags are hidden</li>
+      <li>When clicking back out of the ContentEditable redisplay the words inside the &lt;del&gt; tags</li>
+    </ol>
+    <h4>Part 2 Newly added words receive an  &lt;ins&gt; tag</h4>
+    <ol type="a">
+      <li>
+        When adding new words inside the ContentEditable, each new word should receive an &lt;ins&gt; tag. E.g. the input text "some new text" will convert to &lt;ins&gt;some&lt;/ins&gt; &lt;ins&gt;new&lt;/ins&gt; &lt;ins&gt;text&lt;/ins&gt;
+      </li>
+    </ol>
+    <h4>Part 3 A tag can only contain a single word (no whitespace allowed)</h4>
+    <ol type="a">
+      <li>
+        When whitespace is introduced inside an &lt;ins&gt; tag, split the tag into two distinct &lt;ins&gt; tags. E.g &lt;ins&gt;test&lt;/ins&gt; will become &lt;ins&gt;te st&lt;/ins&gt; on edit and has to be converted to &lt;ins&gt;te&lt;/ins&gt; &lt;ins&gt;st&lt;/ins&gt;
+      </li>
+      <li>
+        When adding a word in front of an &lt;ins&gt; tag, combine them as long there is no whitespace between them. E.g new&lt;ins&gt;test&lt;/ins&gt; will become &lt;ins&gt;newtest&lt;/ins&gt;
+      </li>
+      <li>
+        When adding a word behind an &lt;ins&gt; tag, combine them as long there is no whitespace between them. E.g &lt;ins&gt;test&lt;/ins&gt;new will become &lt;ins&gt;testnew&lt;/ins&gt;
+      </li>
+    </ol>
+</body>
+
+</html>

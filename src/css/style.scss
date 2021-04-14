@@ -1,0 +1,32 @@
+$red: #ff0000;
+$green: #008000;
+$gray: #808080;
+$lightyellow: #fafad2;
+
+del {
+  color: $red;
+}
+
+ins {
+  color: $green;
+}
+
+[contenteditable="true"]:focus {
+  del {
+    display: none;
+  }
+}
+
+/* Only for beauty */
+
+[contenteditable="true"] {
+  border: solid 1px $gray;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: $lightyellow;
+}
+
+li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
