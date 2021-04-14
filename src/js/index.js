@@ -39,10 +39,9 @@ function concatTextBeforeElem(elem) {
   if (!elem.previousSibling) return;
     if (elem.previousSibling.nodeName === '#text') {
       const textNodeContent = elem.previousSibling.textContent;
-      const lastCharacter = textNodeContent.slice(-1);
       const textNodeContentArr = textNodeContent.split(/\s/);
       
-      if (!/\s/.test(lastCharacter) && textNodeContentArr.length > 1) {
+      if (!textNodeContent.endsWith(' ') && textNodeContentArr.length > 1) {
         const lastWord = textNodeContentArr[textNodeContentArr.length - 1];
         elem.innerText = `${lastWord}${elem.innerText}`;
         elem.previousSibling.textContent = textNodeContent
@@ -52,6 +51,7 @@ function concatTextBeforeElem(elem) {
     }
 }
 
+// Entry point
 window.addEventListener('load', () => {
   const ediatbleArea = document.querySelector('[contenteditable="true"]');
   if (!ediatbleArea) return;
